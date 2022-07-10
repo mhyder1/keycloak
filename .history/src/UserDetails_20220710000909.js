@@ -14,10 +14,10 @@ export default function UserDetails() {
             <div>loggin succeed</div>
             <div>
               {" "}
-              <UserInfo />
+              <UserInfo keycloak={keycloak} />
             </div>
             <div>
-              <Logout />
+              <Logout keycloak={keycloak} />
             </div>
           </div>
         )}

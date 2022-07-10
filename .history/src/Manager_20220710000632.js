@@ -3,7 +3,7 @@ import { useKeycloak } from '@react-keycloak-fork/web'
 
 function Manager() {
   const { keycloak, initialized } = useKeycloak()
-
+  console.log({keycloak})
   return (
     <div>
       {keycloak?.hasResourceRole("manager") ?

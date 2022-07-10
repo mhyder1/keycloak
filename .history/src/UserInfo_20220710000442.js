@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useKeycloak } from '@react-keycloak-fork/web'
 
 export default function UserInfo() {
-  const { keycloak, initialized } = useKeycloak()
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [id, setId] = useState();

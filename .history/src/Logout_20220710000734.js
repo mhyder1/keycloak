@@ -5,11 +5,11 @@ function Logout() {
   const { keycloak, initialized } = useKeycloak()
   const history = useHistory();
   function logout() {
-    history.push('/user-details');
+    history.push('/');
     keycloak.logout();
   }
 
-  return <button onClick={logout}>Logout</button>;
+  return <button onClick={() => logout()}>Logout</button>;
 }
 
 export default Logout;
