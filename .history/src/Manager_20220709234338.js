@@ -3,14 +3,13 @@ import useKeyCloak from './UseKeyCloak';
 
 function Manager() {
   const keycloak = useKeyCloak();
-  console.log({keycloak})
+
   return (
     <div>
       {keycloak?.hasResourceRole("manager") ?
         <div>
           <div>
             <table>
-              <tbody>
               <tr>
                 <th>Name</th>
                 <th>Second Name</th>
@@ -26,7 +25,6 @@ function Manager() {
                 <td>Brown</td>
                 <td>1955</td>
               </tr>
-              </tbody>
             </table>
           </div>
 

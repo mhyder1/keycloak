@@ -3,14 +3,13 @@ import useKeyCloak from './UseKeyCloak';
 
 function Manager() {
   const keycloak = useKeyCloak();
-  console.log({keycloak})
+
   return (
     <div>
-      {keycloak?.hasResourceRole("manager") ?
+      {keycloak && keycloak.hasResourceRole("manager") && (
         <div>
           <div>
             <table>
-              <tbody>
               <tr>
                 <th>Name</th>
                 <th>Second Name</th>
@@ -26,13 +25,12 @@ function Manager() {
                 <td>Brown</td>
                 <td>1955</td>
               </tr>
-              </tbody>
             </table>
           </div>
 
-        </div>
-        :<div>Access denied. You don't have right to access this page.</div>
+        </div>)
       }
+      {(!keycloak || !keycloak.hasResourceRole("manager")) && <div>Access denied. You don't have right to access this page.</div>}
     </div>
   )
 }

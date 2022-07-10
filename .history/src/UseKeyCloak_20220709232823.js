@@ -11,8 +11,7 @@ function useKeyCloak() {
       silentCheckSsoRedirectUri:
         window.location.origin + "/silent-check-sso.html",
     };
-    // const keycloak = new Keycloak("/keycloak.json");
-    const keycloak = new Keycloak();
+    const keycloak = Keycloak();
 
     console.log("before init - authenticated: ", keycloak.authenticated);
 

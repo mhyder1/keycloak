@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 
-export default function UserInfo({ keycloak }) {
+export default function UserInfo(props) {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [id, setId] = useState();
 
   useEffect(() => {
-    console.log("keycloak", keycloak);
+    console.log('keycloak', props.keycloak)
 
-    keycloak.loadUserInfo().then((userInfo) => {
+    props.keycloak.loadUserInfo().then(userInfo => {
       setName(userInfo.name);
       setEmail(userInfo.email);
       setId(userInfo.sub);
-    });
-  }, [keycloak]);
+    })
+  }, []);
 
   return (
     <div className="UserInfo">
@@ -22,4 +22,5 @@ export default function UserInfo({ keycloak }) {
       <p>ID: {id}</p>
     </div>
   );
+
 }

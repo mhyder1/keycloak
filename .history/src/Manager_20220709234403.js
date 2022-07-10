@@ -10,7 +10,6 @@ function Manager() {
         <div>
           <div>
             <table>
-              <tbody>
               <tr>
                 <th>Name</th>
                 <th>Second Name</th>
@@ -26,7 +25,6 @@ function Manager() {
                 <td>Brown</td>
                 <td>1955</td>
               </tr>
-              </tbody>
             </table>
           </div>
 
